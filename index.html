@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marco Bellissimo</title>
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css'>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script scr="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
+
+</head>
+
+<body>
+	<!-- Header Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<header id="header">
+		<div class="main_nav">
+			<div class="container">
+				<div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+				<nav>
+					<ul>
+						<li><a class="smoothscroll" href="#header">Home</a></li>
+						<li><a class="smoothscroll" href="#about">About Us</a></li>
+						<li><a class="smoothscroll" href="#team">Live</a></li>
+						<li><a class="smoothscroll" href="#skills">Photos</a></li>
+						<li><a class="smoothscroll" href="#portfolio">Music</a></li>
+						<li><a class="smoothscroll" href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="title">
+			<div><span class="typcn typcn-notes-outline icon heading"></span></div>
+			<div class="smallsep heading"></div>
+			<h1 class="heading">CosmiC DusT</h1>
+			<a class="smoothscroll" href="#about">
+				<div class="mouse">
+					<div class="wheel"></div>
+				</div>
+			</a>
+		</div>
+		<a class="smoothscroll" href="#about">
+			<div class="scroll-down"></div>
+		</a>
+	</header>
+
+	<!-- About Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<h1>About Us</h1>
+				<div class="block"></div>
+				<p>Salve, mi chiamo Antonio Bernardini e sono un <strong><i> Programmatore </i></strong>. Il mio
+					linguaggio di
+					programmazione preferito è <strong><i>Python</i></strong>, perchè è un linguaggio molto facile, ma
+					nella sua
+					facilità permette di svolgere sia programmi semplici che programmi complessi e addirittura permette
+					di creare
+					<strong><i>virus</i></strong>, come i <strong><i>RAT</i></strong>. Oltre a
+					<strong><i>Python</i></strong> mi
+					piace creare i siti web, infatti programmo anche in <strong><i>HTML, CSS e Javascript</i></strong>.
+					Sono
+					linguaggi molto semplici e permettono la creazione di siti web efficaci, belli, sicuri e facili da
+					usare.
+					Comunque date le mie doti, anche nella creazione di questo <strong><i>Blog</i></strong>, posso dire
+					di non
+					essere solo un Programmatore, ma anche un <strong><i>Web Designer</i></strong>.
+				</p>
+			</div>
+			<div class="row">
+				<div class="six columns">
+					<h3><span class="typcn typcn-device-desktop icon"></span>Our Process</h3>
+					<p>Questo <i>Progetto</i> permette agli studenti il completo approccio con i Computer e con Arduino
+						e
+						RaspBerry. </p>
+				</div>
+				<div class="six columns">
+					<h3><span class="typcn typcn-pen icon"></span>Our Approach</h3>
+					<p>Il nostro approccio sarà diretto e immadiato, e a seconda delle vostre capacità alcuni di voi
+						sarammo
+						selezionati per avere un lavoro stabile.</p>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<h3><span class="typcn typcn-cog-outline icon"></span>Our Goal</h3>
+						<p>Il nostro obbiettivo è quello di insegnare a tutti gli Studenti del corso, almeno le basi
+							essenziali per
+							non tovarsi male in fututo, e speriamo che una volta usciti dall'Accademia riusciate a
+							trovare il lavoro
+							per il quale avete studiato.</p>
+					</div>
+					<div class="six columns">
+						<h3><span class="typcn typcn-lightbulb icon"></span>Our Mission</h3>
+						<p>La nostra missione è sempre stata quella di insegnare agli altri, ma allo stesso tempo
+							quelladi
+							rafforzare le nostre conoscenze.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Live Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<section id="team">
+		<div class="container">
+			<div class="row">
+				<h1>Live</h1>
+				<div class="block"></div>
+
+				<div class="videoWrapper">
+					<video width="500" height="500" id="player1" controls autoplay controlsList="nodownload"></video>
+				</div>
+
+				<div class="vid-hover thumbnail-container">
+					<div>
+						<div class="thumbnail col-3">
+							<figure id="vid1" onclick="changeVid(this.id)">
+								<img src="img/foto1.jpeg">
+								<div class="pos">
+									<span class="title_1"> (Intro) Good Morning Destiny </span>
+								</div>
+							</figure>
+						</div>
+						<div class="thumbnail col-3">
+							<figure id="vid2" onclick="changeVid(this.id)">
+								<img src="img/locandina.jpeg">
+								<div class="pos">
+									<span class="title_1"> Live 22 Luglio  </span>
+								</div>
+							</figure>
+						</div>
+						<div class="thumbnail col-3">
+							<figure id="vid3" onclick="changeVid(this.id)"><img src="img/foto4.jpeg">
+								<div class="pos">
+									<span class="title_1"> VIDEO 3 </span>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Photos Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<section id="skills">
+		<div class="container">
+			<h1>Photos</h1>
+			<div class="block"></div>
+			<div class="quoteLoop">
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/foto1.jpeg" width="1000" height="600" alt="" />
+						<span>
+							<strong>Photo by Endo Scafuro</strong>
+						</span>
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/foto3.jpeg" width="1000" height="600" alt="" />
+						<span>
+							<strong>Photo by Endo Scafuro</strong>
+						</span>
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/foto4.jpeg" width="1000" height="600" alt="" />
+						<span>
+							<strong>Photo by Endo Scafuro</strong>
+						</span>
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/strumenti.jpeg" width="1000" height="600" alt="" />
+						<!-- <span>
+							<strong>Photo by Endo Scafuro</strong>
+						</span> -->
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo.jpeg" width="1000" height="600" alt="" />
+						<!-- <span>
+							<strong>Photo by Endo Scafuro</strong>
+						</span> -->
+					</div>
+				</blockquote>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Music Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<section id="portfolio">
+		<div class="container">
+			<h1>Music</h1>
+			<div class="block"></div>
+			<div id="orient">
+				<audio id="audio">
+					<source id="source1" src="audio/Intro-Good-Morning-Destiny.mp3" type="audio/mp3">
+					<source id="source2" src="audio/First-Steps.mp3" type="audio/mp3">
+				</audio>
+				<br><br>
+				<div id="playlist" class="play-ul">
+					<ul>
+						<li>
+							<button class="play-pause" onclick="playSource(1)"></button>
+							<span>(Intro) Good Morning Destiny</span>
+						</li>
+						<li>
+							<button class="play-pause" onclick="playSource(2)"></button>
+							<span>First Steps</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- AUDIO VISUALIZER -->
+				<canvas id="canvas" class="responsive-canvas" width="800" height="300"></canvas>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<div id="contact">
+		<div class="container">
+			<h1>Contact</h1>
+			<div class="block"></div>
+			<p class="typcn typcn-mail"> <i>Email: floyd@live.it </i> </p>
+			<p class="typcn typcn-phone-outline"> <i>Telefono: 3201820417 </i></p>
+		</div>
+
+	</div>
+
+
+	</section>
+
+	<!-- Footer Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+	<footer>
+		<div class="container">
+			<div class="nine columns">
+				<span id="text" class="typcn typcn-social-facebook socialIcons"> <a href="https://www.facebook.com"
+						style="color: white;" target="_blank">Facebook</a></span><br>
+				<span id="text" class="typcn typcn-social-instagram socialIcons"> <a href="https://www.instagram.com"
+						style="color: white;" target="_blank">Instagram</a></span><br>
+				<span id="text" class="typcn typcn-social-youtube socialIcons"> <a href="https://www.youtube.com"
+						style="color: white;" target="_blank">Youtube</a></span>
+			</div>
+			<div class="three columns">
+				<p id="size">Created with love <br>by Antonio Bernardini</p>
+			</div>
+		</div>
+	</footer>
+	<script src="js/index.js"></script>
+
+</body>
+
+</html>
