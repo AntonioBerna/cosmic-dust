@@ -56,6 +56,19 @@
     src: url(https://raw.githubusercontent.com/abxlfazl/music-player-widget/main/src/assets/font/AvenirNextRoundedProMedium.TTF);
 }
 
+html {
+    box-sizing: border-box;
+
+    --duration: 1s;
+    --ease-slider: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-timeline: cubic-bezier(0.71, 0.21, 0.3, 0.95);
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    transition: var(--duration) background-color var(--ease-slider);
+}
+
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -136,10 +149,15 @@
     text-overflow: ellipsis;
 }
 
+.loading {
+    gap: 0 0.5rem;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
 /* PUBLIC CLASSES */
 
 .music-player {
-    display: inline-block;
     --color-white: #fff;
     --color-gray: #e5e7ea;
     --color-blue: #78adfe;
@@ -469,4 +487,3 @@
       width: 100%; /* Imposta una larghezza del 100% su schermi ancora più piccoli */
     }
   }
-  
