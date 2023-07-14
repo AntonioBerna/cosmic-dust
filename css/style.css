@@ -704,21 +704,6 @@ nav ul a:hover {
 	background-position: center;
 }
 
-/* Testimonial Section
-********************************************************************* */
-#phrases {
-	background: #F5F5F5;
-	padding: 100px 0 100px 0;
-}
-
-#test {
-	background-image: url("musical-background-3679343_960_720.jpg");
-	width: 1000px;
-	height: 600px;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 .quoteLoop {
 	height: auto;
 	width: 100%;
@@ -738,7 +723,7 @@ nav ul a:hover {
 /* Contact Section
 ********************************************************************* */
 #contact {
-	padding: 0 0 100px 0;
+	padding: 0 0 75px 0;
 }
 
 input[type="email"],
