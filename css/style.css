@@ -400,7 +400,7 @@ header {
 .main_nav {
 	position: fixed;
 	top: 0;
-	max-height: 50px;
+	max-height: 45px;
 	z-index: 999;
 	width: 100%;
 	padding-top: 17px;
@@ -591,19 +591,19 @@ nav ul a:hover {
 	padding: 100px 0 50px 0;
 }
 
-/* Team Section
+/* live Section
 ********************************************************************* */
-#team {
+#live {
 	padding: 50px 0 100px 0;
 }
 
-#team .icon {
+#live .icon {
 	font-size: 26px;
 }
 
-/* Skills Section
+/* photos Section
 ********************************************************************* */
-#skills {
+#photos {
 	padding: 100px 0 100px 0;
 	background-color: #F5F5F5;
 }
@@ -681,10 +681,10 @@ nav ul a:hover {
 	width: 100%;
 }
 
-/* Portfolio Section
+/* music Section
 ********************************************************************* */
-#portfolio {
-	padding: 100px 0 100px 0;
+#music {
+	padding: 100px 0 0 0;
 }
 
 .image {
@@ -738,7 +738,7 @@ nav ul a:hover {
 /* Contact Section
 ********************************************************************* */
 #contact {
-	padding: 100px 0 100px 0;
+	padding: 0 0 100px 0;
 }
 
 input[type="email"],
@@ -793,7 +793,7 @@ input[type="submit"]:hover {
 /* Footer Section
 ********************************************************************* */
 footer {
-	min-height: 120px;
+	min-height: 50px;
 	padding: 40px 0 40px 0;
 	background: #e55d87;
 	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
