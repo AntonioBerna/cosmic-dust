@@ -1083,14 +1083,9 @@ AUDIO
 
 
 
+/* LIVE STREAM WITH MARCO */
 
-/******
-
-LIVE STREAM WITH MARCO 
-
-***/
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 span {
 	font-family: 'Montserrat', sans-serif;
@@ -1228,7 +1223,7 @@ figure:hover .pos .title_1 {
 
 .pos {
 	position: relative;
-}
+} */
 
 .video-container {
     display: flex;
