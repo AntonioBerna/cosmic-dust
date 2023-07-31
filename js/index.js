@@ -227,7 +227,7 @@ function changeVid(clicked_id) {
         newVid = 'video/live.mp4';
     }
     if (clicked_id === 'vid2') {
-        newVid = "https://player.vimeo.com/video/133509734";
+        newVid = "la-caletta-di-ostia/video/live.mp4";
     }
     if (clicked_id === 'vid3') {
         newVid = "https://player.vimeo.com/video/113616778";

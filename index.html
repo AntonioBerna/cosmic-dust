@@ -8,17 +8,18 @@
 
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'>
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css'>
+	<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/music.css">
-	<link rel="icon" type="image/x-icon" href="img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="img/icon/favicon.png">
 
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script scr="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
-	
+
 </head>
 
 <body>
@@ -120,7 +121,32 @@
 				<h1>Live</h1>
 				<div class="block"></div>
 
-				<div class="videoWrapper">
+				<div class="video-container">
+					<video id="my-video-1" class="video-js" controls preload="auto" width="640" height="264" poster="img/gruppo/marco-1.jpeg" data-setup="{}">
+						<source src="video/live.mp4" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+					<video id="my-video-2" class="video-js" controls preload="auto" width="640" height="264" poster="la-caletta-di-ostia/photos/locandina.jpeg" data-setup="{}">
+						<source src="la-caletta-di-ostia/video/live.mp4" type="video/mp4" />
+						<p class="vjs-no-js">
+							To view this video please enable JavaScript, and consider upgrading to a
+							web browser that
+							<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+						</p>
+					</video>
+					<!-- <video id="my-video-3" class="video-js" controls preload="auto" width="640" height="264" poster="la-caletta-di-ostia/photos/locandina.jpeg" data-setup="{}">
+						
+					</video>
+					<video id="my-video-4" class="video-js" controls preload="auto" width="640" height="264" poster="la-caletta-di-ostia/photos/locandina.jpeg" data-setup="{}">
+						
+					</video> -->
+				</div>
+				
+				<!-- <div class="videoWrapper">
 					<video width="500" height="500" id="player1" controls autoplay controlsList="nodownload"></video>
 				</div>
 
@@ -128,7 +154,7 @@
 					<div>
 						<div class="thumbnail col-3">
 							<figure id="vid1" onclick="changeVid(this.id)">
-								<img src="img/foto1.jpeg">
+								<img src="img/gruppo/marco-1.jpeg">
 								<div class="pos">
 									<span class="title_1"> (Intro) Good Morning Destiny </span>
 								</div>
@@ -136,21 +162,22 @@
 						</div>
 						<div class="thumbnail col-3">
 							<figure id="vid2" onclick="changeVid(this.id)">
-								<img src="img/locandina.jpeg">
+								<img src="la-caletta-di-ostia/photos/locandina.jpeg">
 								<div class="pos">
-									<span class="title_1"> Live 22 Luglio  </span>
+									<span class="title_1"> Live 22 Luglio </span>
 								</div>
 							</figure>
 						</div>
 						<div class="thumbnail col-3">
-							<figure id="vid3" onclick="changeVid(this.id)"><img src="img/foto4.jpeg">
+							<figure id="vid3" onclick="changeVid(this.id)">
+								<img src="img/gruppo/marco-4.jpeg">
 								<div class="pos">
 									<span class="title_1"> VIDEO 3 </span>
 								</div>
 							</figure>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 	</section>
 
@@ -163,7 +190,61 @@
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/foto1.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/logo.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/band-1.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/band-2.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/band-3.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/band-4.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/band-5.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/batteria.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/chitarra.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="la-caletta-di-ostia/photos/logo.jpg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo/marco-1.jpeg" width="1000" height="600" alt="" />
 						<span>
 							<strong>Photo by Hendo Scafuro</strong>
 						</span>
@@ -172,7 +253,7 @@
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/foto3.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/marco-3.jpeg" width="1000" height="600" alt="" />
 						<span>
 							<strong>Photo by Hendo Scafuro</strong>
 						</span>
@@ -181,7 +262,7 @@
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/foto4.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/marco-4.jpeg" width="1000" height="600" alt="" />
 						<span>
 							<strong>Photo by Hendo Scafuro</strong>
 						</span>
@@ -190,16 +271,27 @@
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/strumenti.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/chitarra-1.jpg" width="1000" height="600" alt="" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/gruppo.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/chitarra-2.jpg" width="1000" height="600" alt="" />
 					</div>
 				</blockquote>
 
+				<!-- <blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo/strumenti.jpeg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote> -->
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo/tutti.jpeg" width="1000" height="600" alt="" />
+					</div>
+				</blockquote>
 			</div>
 		</div>
 	</section>
@@ -261,13 +353,15 @@
 						style="color: white;" target="_blank">Youtube</a></span>
 			</div>
 			<div class="three columns">
-				<p id="size">Created with love <br>by <a href="https://antonioberna.github.io/" style="color: white;" target="_blank">Antonio Bernardini</a> </p>
+				<p id="size">Created with love <br>by <a href="https://antonioberna.github.io/"
+						style="color: white;text-decoration: underline;" target="_blank">Antonio Bernardini</a> </p>
 			</div>
 		</div>
 	</footer>
 
 	<script src="js/index.js"></script>
 	<script src="js/music.js"></script>
+	<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 </body>
 
 </html>

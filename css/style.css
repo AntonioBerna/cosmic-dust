@@ -324,7 +324,7 @@ header {
 	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1);
 	*/
-	background-image: url("../img/foto2.jpeg");
+	background-image: url("../img/icon/home.jpeg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -1012,7 +1012,7 @@ AUDIO
 	height: 30px;
 	border: none;
 	background-color: transparent;
-	background-image: url('../img/pause-play.png');
+	background-image: url('../img/icon/pause-play.png');
 	/* Aggiungi l'URL dell'icona Play/Pause */
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1023,7 +1023,7 @@ AUDIO
 }
 
 #playlist button.play-pause.playing {
-	background-image: url('../img/pause-play.png');
+	background-image: url('../img/icon/pause-play.png');
 	/* Aggiungi l'URL dell'icona di pausa */
 }
 
@@ -1228,6 +1228,23 @@ figure:hover .pos .title_1 {
 
 .pos {
 	position: relative;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-js {
+    width: 30%;
+    margin: 10px;
+}
+
+@media (max-width: 767px) {
+    .video-js {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 /* Self Clearing Goodness */
