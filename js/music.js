@@ -16,6 +16,28 @@ let progressBarIsUpdating = false;
 let broadcastGuarantor_elmnt = null;
 const root = querySelector("#root");
 
+const gist_url = "https://gist.githubusercontent.com/AntonioBerna/c3c7dc98d8cafb31a94334d1b9ef092d/raw/55bf94a9cd0e8562c470e12c5710c06636f57c69/music.json";
+
+/* OnLoad Music */
+
+// fetch(gist_url)
+//     .then(response => response.json())
+//     .then(result => {
+//         const songUrl = result["onload-song"];
+
+//         var sound = new Howl({
+//             src: [songUrl],
+//             autoplay: true,
+//             loop: false,
+//             volume: 0.5
+//         });
+//     })
+//     .catch(error => {
+//         console.error("Errore durante il recupero dei dati JSON:", error);
+//     });
+
+
+
 function App({ songs }) {
 	function handleChangeMusic({ isPrev = false, playListIndex = null }) {
 		if (isLocked || indexSong === playListIndex) return;
@@ -140,10 +162,6 @@ function Slider({ slides, handleChangeMusic }) {
 					dom("div", { class: "progress__wrapper" },
 						dom("div", { class: "progress__bar center" }))))));
 
-
-
-
-
 }
 
 function Playlist({ list, handleChangeMusic }) {
@@ -260,7 +278,7 @@ function dom(tag, props, ...children) {
 }
 
 
-fetch("https://gist.githubusercontent.com/AntonioBerna/c3c7dc98d8cafb31a94334d1b9ef092d/raw/d331a91ff63e02b222b30c2887768161dcac1e1c/music.json").
+fetch(gist_url).
 
 then(respone => respone).
 then(data => data.json()).
