@@ -1,11 +1,34 @@
 /* OnLoad Music */
 
-var sound = new Howl({
-	src: ["audio/onload-song.mp3"],
-	autoplay: true,
-	loop: false,
-	volume: 0.5
-});
+// Verifica se il browser supporta l'API AudioContext
+if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
+	// Crea un'istanza di AudioContext
+	const audioContext = new (AudioContext || webkitAudioContext)();
+
+	// Crea un nodo per l'uscita audio
+	const destination = audioContext.destination;
+
+	// Puoi ora utilizzare 'destination' per inviare l'audio alle casse
+
+	// Ad esempio, crea un nodo audio e collega l'uscita alle casse
+	const oscillator = audioContext.createOscillator();
+	oscillator.connect(destination);
+	oscillator.start();
+
+	// Puoi creare altri nodi audio e collegarli all'uscita come desideri
+
+} else {
+	console.error("Il tuo browser non supporta l'API AudioContext.");
+}
+
+
+
+// var sound = new Howl({
+// 	src: ["audio/onload-song.mp3"],
+// 	autoplay: true,
+// 	loop: false,
+// 	volume: 0.5
+// });
 
 new Vue({
 	el: "#app",
