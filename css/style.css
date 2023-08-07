@@ -686,12 +686,6 @@ nav ul a:hover {
 	width: 100%;
 }
 
-/* music Section
-********************************************************************* */
-#music {
-	padding: 100px 0 0 0;
-}
-
 .image {
 	background-color: #5a5a5a;
 	width: 100%;
@@ -725,10 +719,15 @@ nav ul a:hover {
 	color: white;
 }
 
+/* Music Section */
+#music {
+	padding: 100px 0 0 0;
+}
+
 /* Contact Section
 ********************************************************************* */
 #contact {
-	padding: 0 0 75px 0;
+	padding: 75px 0 75px 0;
 }
 
 input[type="email"],
