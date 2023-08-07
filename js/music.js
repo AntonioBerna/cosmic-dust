@@ -1,23 +1,11 @@
 /* OnLoad Music */
 
-const gist_url = "https://gist.githubusercontent.com/AntonioBerna/c3c7dc98d8cafb31a94334d1b9ef092d/raw/55bf94a9cd0e8562c470e12c5710c06636f57c69/music.json";
-
-fetch(gist_url)
-    .then(response => response.json())
-    .then(result => {
-        const songUrl = result["onload-song"];
-
-        var sound = new Howl({
-            src: ["audio/onload-song.mp3"],
-            autoplay: true,
-            loop: false,
-            volume: 0.5
-        });
-    })
-    .catch(error => {
-        console.error("Errore durante il recupero dei dati JSON:", error);
-    });
-
+var sound = new Howl({
+	src: ["audio/onload-song.mp3"],
+	autoplay: true,
+	loop: false,
+	volume: 0.5
+});
 
 new Vue({
 	el: "#app",
