@@ -1223,18 +1223,29 @@ figure:hover .pos .title_1 {
 .video-container {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .video-js {
-	width: 30%;
-	margin: 10px;
+	width: 100%;
+	/* margin: 10px; */
 }
 
-@media (max-width: 767px) {
-	.video-js {
-		width: 100%;
-		margin: 10px 0;
-	}
+.video-wrapper {
+    width: 45%;
+    margin: 10px;
+}
+
+.video-title {
+	font-size: medium;
+	text-align: center;
+	font-family: 'Rock Salt', Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .video-wrapper {
+        width: 90%;
+    }
 }
 
 /* Self Clearing Goodness */
