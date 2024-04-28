@@ -2,6 +2,6 @@
 
 set -xe
 
-cmake .
+cmake -B ./build/
+cd ./build/
 make
-
