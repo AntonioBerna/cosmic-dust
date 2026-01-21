@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cosmic Dust</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<title>Cosmic Dust - Band Musicale Italiana | Rock & Progressive</title>
+	<meta name="description" content="Cosmic Dust è una band musicale italiana che esplora sonorità rock e progressive. Scopri la nostra musica, video live, foto e contatti.">
+	<meta name="keywords" content="Cosmic Dust, band italiana, musica rock, progressive rock, Vincenzo Grisorio, Mauro Trentani, Marco Bellissimo, musica dal vivo, band Roma, concerti Italia, rock italiano">
+	<meta name="author" content="Cosmic Dust">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="language" content="Italian">
+	<meta name="revisit-after" content="7 days">
+	<meta name="rating" content="general">
+	<link rel="canonical" href="https://cosmicdust.space/">
+	
+	<!-- Theme & Mobile App Meta Tags -->
+	<meta name="theme-color" content="#ff006e">
+	<meta name="msapplication-TileColor" content="#ff006e">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Cosmic Dust">
+	<meta name="application-name" content="Cosmic Dust">
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- Geo Meta Tags -->
+	<meta name="geo.region" content="IT">
+	<meta name="geo.placename" content="Italia">
+	
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Cosmic Dust - Band Musicale Italiana | Rock & Progressive">
+	<meta property="og:description" content="Scopri Cosmic Dust: band italiana con sonorità rock e progressive. Ascolta la nostra musica, guarda i video live e scopri di più su di noi.">
+	<meta property="og:image" content="https://cosmicdust.space/img/gruppo/logo.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="Logo della band Cosmic Dust">
+	<meta property="og:url" content="https://cosmicdust.space/">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Cosmic Dust">
+	<meta property="og:locale" content="it_IT">
+	<meta property="og:locale:alternate" content="en_US">
+	
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@cosmicdust">
+	<meta name="twitter:creator" content="@cosmicdust">
+	<meta name="twitter:title" content="Cosmic Dust - Band Musicale Italiana">
+	<meta name="twitter:description" content="Band italiana con sonorità rock e progressive. Ascolta la nostra musica e guarda i nostri video live.">
+	<meta name="twitter:image" content="https://cosmicdust.space/img/gruppo/logo.jpg">
+	<meta name="twitter:image:alt" content="Logo della band Cosmic Dust">
 
+	<!-- Preconnect for Performance -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+	<link rel="preconnect" href="https://vjs.zencdn.net">
+	<link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+	
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext"
 		rel="stylesheet" />
 	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css'>
@@ -19,7 +70,7 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	
+
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
@@ -27,19 +78,22 @@
 </head>
 
 <body>
+	<!-- Cosmic Dust Background Effect -->
+	<canvas id="cosmicDust"></canvas>
+	
 	<!-- Header Section -->
 	<header id="header">
 		<div class="main_nav">
 			<div class="container">
-				<div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+				<div class="mobile-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0"> <span></span> <span></span> <span></span> </div>
 				<nav>
 					<ul>
 						<li><a class="smoothscroll" href="#header">Home</a></li>
 						<li><a class="smoothscroll" href="#presentation">Presentation</a></li>
 						<li><a class="smoothscroll" href="#about">About Us</a></li>
 						<li><a class="smoothscroll" href="#live">Live</a></li>
-						<li><a class="smoothscroll" href="#photos">Photos</a></li>
-						<li><a class="smoothscroll" href="#music">Music</a></li>
+					<li><a class="smoothscroll" href="#music">Music</a></li>
+					<li><a class="smoothscroll" href="#photos">Photos</a></li>
 						<li><a class="smoothscroll" href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -67,13 +121,30 @@
 				<h1>Presentation</h1>
 				<div class="block"></div>
 
-				<p style="text-align: justify; font-size: 17px; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
-					"Cosmic Dust" nasce dall'idea di dare un nome a questo progetto artistico e musicale, e scaturisce dallo spunto e dalla riflessione che in un certo qual modo, tutti noi siamo collegati all’Universo, seppure, considerando la sua infinita grandezza, ne occupiamo un piccolo spazio. <br> <br>
-					Mi piace meditare e ricordare che da esso deriviamo, in esso viviamo, ed in qualche modo ancora sconosciuto, circa la forma e le modalità, ad esso continueremo ad appartenere nel passaggio alla nostra vita ultra terrena. <br> <br>
-					Alcuni scienziati attribuiscono alla Polvere Cosmica, l'origine e la nascita delle stelle più antiche, ai primi corpi celesti. Essa è presente nelle vicine e anche lontane Galassie. Probabilmente in stato di quiete o in uno stadio differente. Dal generarsi di certe determinate condizioni essa può trasformarsi, caricandosi di energia, creando nuove realtà cosmiche, nuove galassie, nuovi corpi celesti, nuovi pianeti... nuova vita! <br> <br>
-					Nel contempo, mi piace poter credere, che in qualche modo essa sia collegata alla creazione dell'umanità. Di polvere in termini diversi si parla anche in una delle citazioni più importanti delle Sacre Scritture, "quia pulvis es et in pulvirem revertis" Vulgata della Bibbia (libro della Genesi 3, 19 [1]). <br> <br>
-					L'architettura di tale opera artistica si traduce in musica che per la sua astratta natura, è indubbiamente riconducibile e ricollegabile all’Universo secondo l'effetto che essa produce su noi uomini al momento del suo ascolto, proiettandoci verso un immaginario "viaggio spazio temporale". <br> <br>
-					Condividendo questa opera non si può non tener conto di quanto in altre parole, ogni essere umano nell’arco della sua vita terrena ed ultra terrena, sia collegato al Cosmo, ai suoi misteri e al suo sconfinato e insondabile fascino... <br> <br>
+				<p
+					style="text-align: justify; font-size: 17px; font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+					"Cosmic Dust" nasce dall'idea di dare un nome a questo progetto artistico e musicale, e scaturisce
+					dallo spunto e dalla riflessione che in un certo qual modo, tutti noi siamo collegati all’Universo,
+					seppure, considerando la sua infinita grandezza, ne occupiamo un piccolo spazio. <br> <br>
+					Mi piace meditare e ricordare che da esso deriviamo, in esso viviamo, ed in qualche modo ancora
+					sconosciuto, circa la forma e le modalità, ad esso continueremo ad appartenere nel passaggio alla
+					nostra vita ultra terrena. <br> <br>
+					Alcuni scienziati attribuiscono alla Polvere Cosmica, l'origine e la nascita delle stelle più
+					antiche, ai primi corpi celesti. Essa è presente nelle vicine e anche lontane Galassie.
+					Probabilmente in stato di quiete o in uno stadio differente. Dal generarsi di certe determinate
+					condizioni essa può trasformarsi, caricandosi di energia, creando nuove realtà cosmiche, nuove
+					galassie, nuovi corpi celesti, nuovi pianeti... nuova vita! <br> <br>
+					Nel contempo, mi piace poter credere, che in qualche modo essa sia collegata alla creazione
+					dell'umanità. Di polvere in termini diversi si parla anche in una delle citazioni più importanti
+					delle Sacre Scritture, "quia pulvis es et in pulvirem revertis" Vulgata della Bibbia (libro della
+					Genesi 3, 19 [1]). <br> <br>
+					L'architettura di tale opera artistica si traduce in musica che per la sua astratta natura, è
+					indubbiamente riconducibile e ricollegabile all’Universo secondo l'effetto che essa produce su noi
+					uomini al momento del suo ascolto, proiettandoci verso un immaginario "viaggio spazio temporale".
+					<br> <br>
+					Condividendo questa opera non si può non tener conto di quanto in altre parole, ogni essere umano
+					nell’arco della sua vita terrena ed ultra terrena, sia collegato al Cosmo, ai suoi misteri e al suo
+					sconfinato e insondabile fascino... <br> <br>
 					Benvenuto nel mondo <br> <br>
 					CosmiC DusT
 				</p>
@@ -85,7 +156,7 @@
 	<section id="about">
 		<div class="container">
 			<div class="row">
-				<h1>About Us</h1>
+				<h2>About Us</h2>
 				<div class="block"></div>
 
 				<div class="responsive-container-block cards-container">
@@ -93,52 +164,49 @@
 						<div class="responsive-cell-block wk-desk-4 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
 							<div class="card">
 								<div class="team-image-wrapper">
-									<img class="team-member-image" src="img/presentation/vincenzo-presentation.png">
+									<img class="team-member-image" src="img/presentation/vincenzo-presentation.png" alt="Vincenzo Grisorio - Bassista e Chitarrista di Cosmic Dust" loading="lazy">
 								</div>
 								<p class="text-blk name">
 									Vincenzo Grisorio
 								</p>
 								<p class="text-blk position">
-									Bass and Guitar
+									Bass • Guitar
 								</p>
-								<!-- <p class="text-blk feature-text">
-									He studied double bass at the Santa Cecilia Conservatory of Music in Rome, a student of Maestro Penta, first double bassist at the Music Academy of Rome.
-									From a very young age, he brought back music theory from double bass to electric bass in Heavy Metal and Hard Rock bands.
-									Mountain running and music, according to him a perfect combination to achieve the perfect balance between body and mind.
-									Today he plays Bass and Guitar in Cosmic Dust always running on mountain ridges to the rhythm of their songs.
-								</p> -->
+								<p class="text-blk feature-text">
+									Studioso di contrabbasso classico, porta nella band un background tecnico solido e una passione per la fusione tra tradizione e modernità.
+								</p>
 							</div>
 						</div>
 						<div class="responsive-cell-block wk-desk-4 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
 							<div class="card">
 								<div class="team-image-wrapper">
-									<img class="team-member-image" src="img/presentation/mauro-presentation.png">
+									<img class="team-member-image" src="img/presentation/marco-presentation.png" alt="Marco Bellissimo - Voce, Chitarra e Basso di Cosmic Dust" loading="lazy">
+								</div>
+								<p class="text-blk name">
+									Marco Bellissimo
+								</p>
+								<p class="text-blk position">
+									Vocals • Guitar • Bass
+								</p>
+								<p class="text-blk feature-text">
+									Frontman e autore dei testi. La sua visione artistica guida il sound cosmico e progressivo della band.
+								</p>
+							</div>
+						</div>
+						<div class="responsive-cell-block wk-desk-4 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+							<div class="card">
+								<div class="team-image-wrapper">
+									<img class="team-member-image" src="img/presentation/mauro-presentation.png" alt="Mauro Trentani - Batterista e Percussionista di Cosmic Dust" loading="lazy">
 								</div>
 								<p class="text-blk name">
 									Mauro Trentani
 								</p>
 								<p class="text-blk position">
-									Drums and Percussion
+									Drums • Percussion
 								</p>
-								<!-- <p class="text-blk feature-text">
-									Coming Soon...
-								</p> -->
-							</div>
-						</div>
-						<div class="responsive-cell-block wk-desk-4 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-							<div class="card">
-								<div class="team-image-wrapper">
-									<img class="team-member-image" src="img/presentation/marco-presentation.png">
-								</div>
-								<p class="text-blk name">
-									Marco Bellissimo
+								<p class="text-blk feature-text">
+									Energia pura e precisione ritmica. Il suo groove dinamico e la sua presenza scenica definiscono l'identità sonora della band.
 								</p>
-								<p class="text-blk position" style="font-size: 12px">
-									Lyrics Voice, Guitar and Bass
-								</p>
-								<!-- <p class="text-blk feature-text">
-									Coming Soon...
-								</p> -->
 							</div>
 						</div>
 						<!-- <div class="responsive-cell-block wk-desk-4 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
@@ -168,7 +236,7 @@
 	<section id="live">
 		<div class="container">
 			<div class="row">
-				<h1>Live</h1>
+				<h2>Live</h2>
 				<div class="block"></div>
 
 				<div class="video-container">
@@ -179,7 +247,8 @@
 							<p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
 								web browser that
-								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+									video</a>
 							</p>
 						</video>
 						<p class="video-title">Intro (Good Morning Destiny)</p>
@@ -192,7 +261,8 @@
 							<p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
 								web browser that
-								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+									video</a>
 							</p>
 						</video>
 						<p class="video-title">Intro (Good Morning Destiny)</p>
@@ -205,12 +275,13 @@
 							<p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
 								web browser that
-								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+									video</a>
 							</p>
 						</video>
 						<p class="video-title">Past</p>
 					</div>
-					
+
 					<div class="video-wrapper">
 						<video id="my-video-3" class="video-js" controls preload="auto" width="640" height="264"
 							poster="la-caletta-di-ostia/photos/band-4.jpg" data-setup="{}">
@@ -218,7 +289,8 @@
 							<p class="vjs-no-js">
 								To view this video please enable JavaScript, and consider upgrading to a
 								web browser that
-								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+								<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+									video</a>
 							</p>
 						</video>
 						<p class="video-title">Solitude</p>
@@ -267,184 +339,140 @@
 			</div>
 	</section>
 
+	<!-- Music Section - Immersive Experience -->
+	<section id="music" class="immersive-music">
+		<!-- Spectral Analyzer Background -->
+		<canvas id="spectrumCanvas"></canvas>
+		
+		<!-- Overlay Content -->
+		<div class="music-overlay">
+			<!-- Track Info -->
+			<div class="immersive-track-info">
+				<div class="track-number-large" id="trackNumber">01</div>
+				<div class="track-title-large" id="trackTitle">(Intro) Good Morning Destiny</div>
+				<div class="track-artist-large">COSMIC DUST</div>
+			</div>
+			
+			<!-- Controls -->
+			<div class="immersive-controls">
+				<button class="immersive-btn" id="prevBtn" aria-label="Previous track">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+					</svg>
+				</button>
+				
+				<button class="immersive-btn play-btn-immersive" id="playBtn" aria-label="Play/Pause">
+					<svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M8 5v14l11-7z" />
+					</svg>
+					<svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+						<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+					</svg>
+				</button>
+				
+				<button class="immersive-btn" id="nextBtn" aria-label="Next track">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		
+		<!-- Audio Element -->
+		<audio id="audioPlayer" crossorigin="anonymous" preload="auto">
+			<source src="https://raw.githubusercontent.com/AntonioBerna/cosmic-dust/master/audio/intro-good-morning-destiny.wav" type="audio/wav">
+		</audio>
+	</section>
+
 	<!-- Photos Section -->
 	<section id="photos">
 		<div class="container">
-			<h1>Photos</h1>
+			<h2>Photos</h2>
 			<div class="block"></div>
 			<div class="quoteLoop">
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/gruppo/logo.jpg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/logo.jpg" width="1000" height="600" alt="Logo della band Cosmic Dust" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/band-1.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/band-1.jpg" width="1000" height="600" alt="Cosmic Dust in concerto a La Caletta di Ostia" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/band-2.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/band-2.jpg" width="1000" height="600" alt="Cosmic Dust live performance La Caletta di Ostia" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/band-3.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/band-3.jpg" width="1000" height="600" alt="Band Cosmic Dust esibizione live" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/band-4.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/band-4.jpg" width="1000" height="600" alt="Cosmic Dust concerto notturno La Caletta di Ostia" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/band-5.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/band-5.jpg" width="1000" height="600" alt="Cosmic Dust palco La Caletta di Ostia" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/batteria.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/batteria.jpg" width="1000" height="600" alt="Batteria Cosmic Dust - Mauro Trentani" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/chitarra.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/chitarra.jpg" width="1000" height="600" alt="Chitarra Cosmic Dust live performance" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="la-caletta-di-ostia/photos/logo.jpg" width="1000" height="600" alt="" />
-					</div>
-				</blockquote>
-
-				<!-- <blockquote class="quote">
-					<div class="caption">
-						<img src="img/gruppo/marco-1.jpeg" width="1000" height="600" alt="" />
-						<span>
-							<strong>Photo by Hendo Scafuro</strong>
-						</span>
-					</div>
-				</blockquote> -->
-
-				<blockquote class="quote">
-					<div class="caption">
-						<img src="img/gruppo/marco-3.jpeg" width="1000" height="600" alt="" />
-						<span>
-							<strong>Photo by Hendo Scafuro</strong>
-						</span>
-					</div>
-				</blockquote>
-
-				<!-- <blockquote class="quote">
-					<div class="caption">
-						<img src="img/gruppo/marco-4.jpeg" width="1000" height="600" alt="" />
-						<span>
-							<strong>Photo by Hendo Scafuro</strong>
-						</span>
-					</div>
-				</blockquote> -->
-
-				<blockquote class="quote">
-					<div class="caption">
-						<img src="img/gruppo/chitarra-1.jpg" width="1000" height="600" alt="" />
+						<img src="la-caletta-di-ostia/photos/logo.jpg" width="1000" height="600" alt="Logo ufficiale band Cosmic Dust" loading="lazy" />
 					</div>
 				</blockquote>
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/gruppo/chitarra-2.jpg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/marco-3.jpeg" width="1000" height="600" alt="Marco Bellissimo - Voce e chitarra Cosmic Dust" loading="lazy" />
 					</div>
 				</blockquote>
-
-				<!-- <blockquote class="quote">
-					<div class="caption">
-						<img src="img/gruppo/strumenti.jpeg" width="1000" height="600" alt="" />
-					</div>
-				</blockquote> -->
 
 				<blockquote class="quote">
 					<div class="caption">
-						<img src="img/gruppo/tutti.jpeg" width="1000" height="600" alt="" />
+						<img src="img/gruppo/chitarra-1.jpg" width="1000" height="600" alt="Chitarra elettrica Cosmic Dust" loading="lazy" />
 					</div>
 				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo/chitarra-2.jpg" width="1000" height="600" alt="Chitarre Cosmic Dust" loading="lazy" />
+					</div>
+				</blockquote>
+
+				<blockquote class="quote">
+					<div class="caption">
+						<img src="img/gruppo/tutti.jpeg" width="1000" height="600" alt="Band Cosmic Dust - Foto di gruppo completo" loading="lazy" />
+					</div>
+				</blockquote>
+
 			</div>
 		</div>
 	</section>
 
-	<!-- Music Section -->
-	<section id="music">
-		<div class="container">
-			<h1>Music</h1>
-			<div class="block"></div>
-		</div>
-		<div class="wrapper" id="app">
-			<div class="player">
-				<div class="player__top">
-					<div class="player-cover">
-						<transition-group :name="transitionName">
-							<div class="player-cover__item" v-if="$index === currentTrackIndex"
-								:style="{ backgroundImage: `url(${track.cover})` }" v-for="(track, $index) in tracks"
-								:key="$index"></div>
-						</transition-group>
-					</div>
-					<div class="player-controls">
-						<div class="player-controls__item -favorite" :class="{ active : currentTrack.favorited }"
-							@click="favorite">
-							<svg class="player-icon">
-								<use xlink:href="#icon-heart-o"></use>
-							</svg>
-						</div>
-						<a :href="currentTrack.url" target="_blank" class="player-controls__item">
-							<svg class="player-icon">
-								<use xlink:href="#icon-link"></use>
-							</svg>
-						</a>
-						<div class="player-controls__item" @click="prevTrack">
-							<svg class="player-icon">
-								<use xlink:href="#icon-prev"></use>
-							</svg>
-						</div>
-						<div class="player-controls__item" @click="nextTrack">
-							<svg class="player-icon">
-								<use xlink:href="#icon-next"></use>
-							</svg>
-						</div>
-						<div class="player-controls__item -xl js-play" @click="play">
-							<svg class="player-icon">
-								<use xlink:href="#icon-pause" v-if="isTimerPlaying"></use>
-								<use xlink:href="#icon-play" v-else></use>
-							</svg>
-						</div>
-					</div>
-				</div>
-				<div class="progress" ref="progress">
-					<div class="progress__top">
-						<div class="album-info" v-if="currentTrack">
-							<div class="album-info__name">{{ currentTrack.artist }}</div>
-							<div class="album-info__track">{{ currentTrack.name }}</div>
-						</div>
-						<div class="progress__duration">{{ duration }}</div>
-					</div>
-					<div class="progress__bar" @click="clickProgress">
-						<div class="progress__current" :style="{ width : barWidth }"></div>
-					</div>
-					<div class="progress__time">{{ currentTime }}</div>
-				</div>
-				<div v-cloak></div>
-			</div>
-		</div>
-	
 		<svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<!-- <symbol id="icon-heart-o" viewBox="0 0 32 32">
@@ -569,7 +597,7 @@
 	<!-- Contact Section -->
 	<section id="contact">
 		<div class="container">
-			<h1>Contact</h1>
+			<h2>Contact</h2>
 			<div class="block"></div>
 			<p class="typcn typcn-mail"> <i>Email: floyd@live.it </i> </p>
 			<p class="typcn typcn-phone-outline"> <i>Telefono: 3201820417 </i></p>
@@ -582,8 +610,9 @@
 			<div class="nine columns">
 				<span id="text" class="typcn typcn-social-facebook socialIcons"> <a href="https://www.facebook.com"
 						style="color: white;" target="_blank">Facebook</a></span><br>
-				<span id="text" class="typcn typcn-social-instagram socialIcons"> <a href="https://www.instagram.com/cosmicdust_officialbandmusic/"
-						style="color: white;" target="_blank">Instagram</a></span><br>
+				<span id="text" class="typcn typcn-social-instagram socialIcons"> <a
+						href="https://www.instagram.com/cosmicdust_officialbandmusic/" style="color: white;"
+						target="_blank">Instagram</a></span><br>
 				<span id="text" class="typcn typcn-social-youtube socialIcons"> <a href="https://www.youtube.com"
 						style="color: white;" target="_blank">Youtube</a></span>
 			</div>
@@ -594,9 +623,191 @@
 		</div>
 	</footer>
 
+	<!-- Back to Top Button -->
+	<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+		<span class="typcn typcn-arrow-up"></span>
+	</button>
+
 	<script src="js/index.js"></script>
 	<script src="js/music.js"></script>
 	<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+	
+	<!-- Schema.org JSON-LD Markup -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "WebSite",
+				"@id": "https://cosmicdust.space/#website",
+				"url": "https://cosmicdust.space/",
+				"name": "Cosmic Dust",
+				"description": "Sito ufficiale della band Cosmic Dust - Rock e Progressive italiano",
+				"inLanguage": "it-IT",
+				"publisher": {
+					"@id": "https://cosmicdust.space/#musicgroup"
+				},
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://cosmicdust.space/?s={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			},
+			{
+				"@type": "MusicGroup",
+				"@id": "https://cosmicdust.space/#musicgroup",
+				"name": "Cosmic Dust",
+				"url": "https://cosmicdust.space/",
+				"genre": ["Rock", "Progressive Rock", "Rock Italiano"],
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://cosmicdust.space/img/gruppo/logo.jpg",
+					"width": 800,
+					"height": 800
+				},
+				"image": [
+					"https://cosmicdust.space/img/gruppo/logo.jpg",
+					"https://cosmicdust.space/img/presentation/vincenzo-presentation.png",
+					"https://cosmicdust.space/img/presentation/mauro-presentation.png",
+					"https://cosmicdust.space/img/presentation/marco-presentation.png"
+				],
+				"description": "Cosmic Dust è una band musicale italiana che esplora sonorità rock e progressive. La band nasce dall'idea di collegare la musica all'universo, esplorando temi cosmici attraverso il rock.",
+				"foundingDate": "2023",
+				"foundingLocation": {
+					"@type": "Place",
+					"name": "Italia",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "IT"
+					}
+				},
+				"member": [
+					{
+						"@type": "OrganizationRole",
+						"member": {
+							"@type": "Person",
+							"name": "Vincenzo Grisorio",
+							"image": "https://cosmicdust.space/img/presentation/vincenzo-presentation.png"
+						},
+						"roleName": ["Bassista", "Chitarrista"]
+					},
+					{
+						"@type": "OrganizationRole",
+						"member": {
+							"@type": "Person",
+							"name": "Mauro Trentani",
+							"image": "https://cosmicdust.space/img/presentation/mauro-presentation.png"
+						},
+						"roleName": ["Batterista", "Percussionista"]
+					},
+					{
+						"@type": "OrganizationRole",
+						"member": {
+							"@type": "Person",
+							"name": "Marco Bellissimo",
+							"image": "https://cosmicdust.space/img/presentation/marco-presentation.png"
+						},
+						"roleName": ["Voce", "Chitarrista", "Bassista", "Autore testi"]
+					}
+				],
+				"sameAs": [
+					"https://www.instagram.com/cosmicdust_officialbandmusic/",
+					"https://www.youtube.com/@CosmicDustBand",
+					"https://www.facebook.com/CosmicDustBand"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "booking",
+					"availableLanguage": ["Italian", "English"]
+				}
+			},
+			{
+				"@type": "MusicRecording",
+				"@id": "https://cosmicdust.space/#track1",
+				"name": "(Intro) Good Morning Destiny",
+				"byArtist": {
+					"@id": "https://cosmicdust.space/#musicgroup"
+				},
+				"genre": ["Rock", "Progressive Rock"]
+			},
+			{
+				"@type": "MusicRecording",
+				"@id": "https://cosmicdust.space/#track2",
+				"name": "First Step",
+				"byArtist": {
+					"@id": "https://cosmicdust.space/#musicgroup"
+				},
+				"genre": ["Rock", "Progressive Rock"]
+			},
+			{
+				"@type": "BreadcrumbList",
+				"@id": "https://cosmicdust.space/#breadcrumb",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "https://cosmicdust.space/"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "Presentation",
+						"item": "https://cosmicdust.space/#presentation"
+					},
+					{
+						"@type": "ListItem",
+						"position": 3,
+						"name": "About Us",
+						"item": "https://cosmicdust.space/#about"
+					},
+					{
+						"@type": "ListItem",
+						"position": 4,
+						"name": "Live",
+						"item": "https://cosmicdust.space/#live"
+					},
+					{
+						"@type": "ListItem",
+						"position": 5,
+						"name": "Music",
+						"item": "https://cosmicdust.space/#music"
+					},
+					{
+						"@type": "ListItem",
+						"position": 6,
+						"name": "Photos",
+						"item": "https://cosmicdust.space/#photos"
+					},
+					{
+						"@type": "ListItem",
+						"position": 7,
+						"name": "Contact",
+						"item": "https://cosmicdust.space/#contact"
+					}
+				]
+			},
+			{
+				"@type": "WebPage",
+				"@id": "https://cosmicdust.space/#webpage",
+				"url": "https://cosmicdust.space/",
+				"name": "Cosmic Dust - Band Musicale Italiana | Rock & Progressive",
+				"isPartOf": {
+					"@id": "https://cosmicdust.space/#website"
+				},
+				"about": {
+					"@id": "https://cosmicdust.space/#musicgroup"
+				},
+				"breadcrumb": {
+					"@id": "https://cosmicdust.space/#breadcrumb"
+				},
+				"inLanguage": "it-IT",
+				"datePublished": "2023-01-01",
+				"dateModified": "2026-01-21"
+			}
+		]
+	}
+	</script>
 </body>
 
 </html>

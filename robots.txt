@@ -1,0 +1,22 @@
+# robots.txt per Cosmic Dust
+# https://cosmicdust.space
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cosmicdust.space/sitemap.xml
+
+# Disallow crawling di file di sistema e cartelle di build
+Disallow: /gh-to-raw/
+
+# Allow crawling di tutte le risorse principali
+Allow: /img/
+Allow: /css/
+Allow: /js/
+Allow: /audio/
+Allow: /video/
+Allow: /la-caletta-di-ostia/
+
+# Crawl-delay per essere gentili con i server
+Crawl-delay: 1

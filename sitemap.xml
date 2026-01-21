@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://cosmicdust.space/</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Logo Image -->
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/gruppo/logo.jpg</image:loc>
+      <image:caption>Logo della band Cosmic Dust - Rock e Progressive italiano</image:caption>
+      <image:title>Cosmic Dust Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Presentation Section -->
+  <url>
+    <loc>https://cosmicdust.space/#presentation</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/presentation/vincenzo-presentation.png</image:loc>
+      <image:caption>Vincenzo Grisorio - Bassista e Chitarrista dei Cosmic Dust</image:caption>
+      <image:title>Vincenzo Grisorio</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/presentation/mauro-presentation.png</image:loc>
+      <image:caption>Mauro Trentani - Batterista e Percussionista dei Cosmic Dust</image:caption>
+      <image:title>Mauro Trentani</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/presentation/marco-presentation.png</image:loc>
+      <image:caption>Marco Bellissimo - Voce, Chitarra e Basso dei Cosmic Dust</image:caption>
+      <image:title>Marco Bellissimo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Us Section -->
+  <url>
+    <loc>https://cosmicdust.space/#about</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Live Section -->
+  <url>
+    <loc>https://cosmicdust.space/#live</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    
+    <video:video>
+      <video:thumbnail_loc>https://cosmicdust.space/img/gruppo/marco-1.jpeg</video:thumbnail_loc>
+      <video:title>(Intro) Good Morning Destiny - Cosmic Dust Live</video:title>
+      <video:description>Performance live della band Cosmic Dust - (Intro) Good Morning Destiny</video:description>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+  
+  <!-- Music Section -->
+  <url>
+    <loc>https://cosmicdust.space/#music</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Photos Section -->
+  <url>
+    <loc>https://cosmicdust.space/#photos</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/gruppo/music-studio-1.jpeg</image:loc>
+      <image:caption>Cosmic Dust in studio di registrazione</image:caption>
+      <image:title>Cosmic Dust Studio</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/gruppo/marco-1.jpeg</image:loc>
+      <image:caption>Marco Bellissimo dei Cosmic Dust</image:caption>
+      <image:title>Marco Bellissimo</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/gruppo/vincenzo-1.jpeg</image:loc>
+      <image:caption>Vincenzo Grisorio dei Cosmic Dust</image:caption>
+      <image:title>Vincenzo Grisorio</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/img/gruppo/mauro-1.jpeg</image:loc>
+      <image:caption>Mauro Trentani dei Cosmic Dust</image:caption>
+      <image:title>Mauro Trentani</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://cosmicdust.space/la-caletta-di-ostia/photos/locandina.jpeg</image:loc>
+      <image:caption>Locandina concerto Cosmic Dust alla Caletta di Ostia</image:caption>
+      <image:title>Concerto La Caletta di Ostia</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://cosmicdust.space/#contact</loc>
+    <lastmod>2026-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

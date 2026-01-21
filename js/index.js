@@ -3,7 +3,7 @@
 ------------------------------------------------------ */
 
 function fade($ele) {
-    $ele.fadeIn(1000).delay(5000).fadeOut(1000, function () {
+    $ele.fadeIn(800).delay(2500).fadeOut(800, function () {
         var $next = $(this).next('.quote');
         fade($next.length > 0 ? $next : $(this).parent().children().first());
     });
@@ -52,17 +52,251 @@ jQuery(document).ready(function ($) {
         var target = this.hash,
             $target = $(target);
 
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 800, 'swing', function () {
-            window.location.hash = target;
-        });
+        // Usa scrollIntoView nativo per performance migliori
+        if ('scrollBehavior' in document.documentElement.style) {
+            // Browser moderni con supporto nativo
+            $target[0].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            // Aggiorna l'hash dopo un breve delay
+            setTimeout(function() {
+                if (history.pushState) {
+                    history.pushState(null, null, target);
+                } else {
+                    window.location.hash = target;
+                }
+            }, 100);
+        } else {
+            // Fallback per browser più vecchi con animazione più veloce
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 500, 'easeInOutCubic', function () {
+                window.location.hash = target;
+            });
+        }
     });
 
 });
 
 
 TweenMax.staggerFrom(".heading", 0.8, { opacity: 0, y: 20, delay: 0.2 }, 0.4);
+
+/*----------------------------------------------------*/
+/* Back to Top Button
+------------------------------------------------------ */
+jQuery(document).ready(function ($) {
+    var backToTopBtn = $('#backToTop');
+    
+    // Show/hide button on scroll
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            backToTopBtn.addClass('visible');
+        } else {
+            backToTopBtn.removeClass('visible');
+        }
+    });
+    
+    // Smooth scroll to top con scrollIntoView nativo
+    backToTopBtn.on('click', function(e) {
+        e.preventDefault();
+        
+        if ('scrollBehavior' in document.documentElement.style) {
+            // Usa scrollIntoView nativo per prestazioni migliori
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // Fallback jQuery più veloce
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        }
+    });
+    
+    // Keyboard accessibility
+    backToTopBtn.on('keypress', function(e) {
+        if (e.which === 13 || e.which === 32) {
+            e.preventDefault();
+            $(this).click();
+        }
+    });
+});
+
+/*----------------------------------------------------*/
+/* Mobile Toggle Keyboard Support
+------------------------------------------------------ */
+jQuery(document).ready(function ($) {
+    $('.mobile-toggle').on('keypress', function(e) {
+        if (e.which === 13 || e.which === 32) {
+            e.preventDefault();
+            $(this).click();
+        }
+    });
+});
+
+/*----------------------------------------------------*/
+/* Scroll Animations for Sections
+------------------------------------------------------ */
+jQuery(document).ready(function ($) {
+    // Add fade-in animation on scroll
+    $(window).scroll(function() {
+        $('.card, .video-wrapper, .quote').each(function() {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).addClass('fade-in-visible');
+            }
+        });
+    });
+});
+
+/*----------------------------------------------------*/
+/* Cosmic Dust Animation
+------------------------------------------------------ */
+(function() {
+    'use strict';
+    
+    // Check for prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        return;
+    }
+    
+    const canvas = document.getElementById('cosmicDust');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationFrameId;
+    
+    // Set canvas dimensions
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    
+    // Particle class
+    class Particle {
+        constructor() {
+            this.reset();
+            // Start particles at random positions on init
+            this.y = Math.random() * canvas.height;
+        }
+        
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = -10;
+            this.vx = (Math.random() - 0.5) * 0.3; // Horizontal drift
+            this.vy = Math.random() * 0.5 + 0.2; // Vertical fall speed
+            this.size = Math.random() * 2 + 0.5;
+            this.opacity = Math.random() * 0.5 + 0.3;
+            this.twinkleSpeed = Math.random() * 0.02 + 0.01;
+            this.twinklePhase = Math.random() * Math.PI * 2;
+        }
+        
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.twinklePhase += this.twinkleSpeed;
+            
+            // Wrap around horizontally
+            if (this.x < 0) this.x = canvas.width;
+            if (this.x > canvas.width) this.x = 0;
+            
+            // Reset particle when it falls off bottom
+            if (this.y > canvas.height) {
+                this.reset();
+            }
+        }
+        
+        draw() {
+            const twinkle = Math.sin(this.twinklePhase) * 0.3 + 0.7;
+            const finalOpacity = this.opacity * twinkle;
+            
+            // Draw particle with glow
+            ctx.beginPath();
+            
+            // Outer glow
+            const gradient = ctx.createRadialGradient(
+                this.x, this.y, 0,
+                this.x, this.y, this.size * 3
+            );
+            gradient.addColorStop(0, `rgba(255, 255, 255, ${finalOpacity * 0.9})`);
+            gradient.addColorStop(0.3, `rgba(135, 206, 250, ${finalOpacity * 0.6})`);
+            gradient.addColorStop(1, 'rgba(135, 206, 250, 0)');
+            
+            ctx.fillStyle = gradient;
+            ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Core
+            ctx.beginPath();
+            ctx.fillStyle = `rgba(255, 255, 255, ${finalOpacity})`;
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+    
+    // Initialize particles
+    function init() {
+        resizeCanvas();
+        particles = [];
+        
+        // Create particles based on screen size
+        const particleCount = Math.min(Math.floor((canvas.width * canvas.height) / 8000), 150);
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+        
+        animate();
+    }
+    
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        
+        animationFrameId = requestAnimationFrame(animate);
+    }
+    
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            resizeCanvas();
+            // Reinitialize particles with new canvas size
+            particles.forEach(particle => {
+                if (particle.x > canvas.width) particle.x = canvas.width;
+                if (particle.y > canvas.height) particle.reset();
+            });
+        }, 250);
+    });
+    
+    // Initialize on load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+    
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
+    });
+})();
 
 /*
     Audio Visualizer
